@@ -7,10 +7,9 @@ import { connect } from "react-redux";
 import { addFeature, removeFeature } from "./actions";
 
 const App = props => {
-  const removeFeature = item => {
+  const removeFeature1 = item => {
     // dispatch an action here to remove an item
-    console.log(item);
-    removeItem(item);
+    props.removeFeature(item);
   };
 
   const buyItem = item => {
@@ -22,7 +21,7 @@ const App = props => {
     <div className="boxes">
       <div className="box">
         <Header car={props.car} />
-        <AddedFeatures car={props.car}  removeFeature={removeFeature}/>
+        <AddedFeatures car={props.car}  removeFeature={removeFeature1}/>
       </div>
       <div className="box">
         <AdditionalFeatures
