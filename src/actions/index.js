@@ -1,18 +1,13 @@
-export const BUY_ITEM = 'BUY_ITEM' //action type to avoid string issues in other areas
-export const REMOVE_FEATURE = 'REMOVE_FEATURE'
+// Action Types
+export const ADD_FEATURE = "ADD_FEATURE";
+export const REMOVE_FEATURE = "REMOVE_FEATURE";
+// Action Creators
+export const addFeature = feature => {
+    console.log("Add Feature");
+    return { type: ADD_FEATURE, payload: feature };
+};
 
-export const buyItem = item => { //action creator, creates the action we are taking
-    console.log(item, 'in buyitem in index.actions')
-    return {
-        type: BUY_ITEM,
-        payload: item
-    }//action itself, this is what we're doing
-}
-
-export const removeFeature = feature => {
-    console.log(feature, 'in removefeat in index.actions')
-    return {
-        type: REMOVE_FEATURE,
-        payload: feature
-    }
-} 
+export const removeItem = feature => {
+    console.log("Remove Feature", feature);
+    return { type: REMOVE_FEATURE, payload: feature };
+};
